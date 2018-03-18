@@ -1,0 +1,162 @@
+/* Reusable */
+*:focus {
+  outline:none; 
+}
+
+
+
+
+/* dark: #424242 */
+/* yellow: #FFD366 */
+/* 
+  healthy green: #86D73F
+  underweight blue: #31BAF9
+  overweight lightorange: #FF982D 
+  obese orange: #FF6C03
+  morbidly obese red: #FF1200
+*/
+
+/* HEADER */
+
+header {
+  background-color: #424242;
+  color: #FFD366;
+}
+
+.form-section {
+  width: 90%;
+}
+
+.form-section label{
+  display: block;
+}
+
+.form-section input {
+  width: 100%;
+  height: 40px;
+  font-size: 1.2rem;
+  color: #eee;
+  background-color: #5a5757;
+  border: 2px solid #FFD366;
+  padding-left: 2px;
+}
+
+::placeholder {
+  color: rgba(238, 238, 238, 0.507);
+}
+
+.result-btn {
+  display: block;
+  background-color: #FFD366;
+  color: #5a5757 !important;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, font-size 0.2s;
+}
+
+.result-btn:hover,
+.result-btn:active {
+  background-color: #ffbf22;
+  font-size: 1.1rem;
+}
+
+/* Result circles */
+
+.healthy-color {
+  color: #86D73F;
+}
+
+.healthy-color .circle {
+  background-color:#86D73F;
+}
+
+.underweight-color {
+  color: #31BAF9;
+}
+
+.underweight-color .circle {
+  background-color: #31BAF9;
+}
+
+.overweight-color {
+  color: #FF982D;
+}
+
+.overweight-color .circle{
+  background-color: #FF982D;
+}
+
+.obese-color {
+  color: #FF6C03;
+}
+
+.obese-color .circle{
+  background-color: #FF6C03;
+}
+
+.morbidly-color {
+  color: #FF1200;
+}
+
+.morbidly-color .circle{
+  background-color: #FF1200;
+}
+
+.result-top {
+  margin-top: 1rem;
+}
+
+.circle {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: green;
+  position: relative;
+  margin-right: 0.8rem;
+}
+
+.result-top span{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.inner-circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: calc(100% - 15px);
+  height: calc(100% - 15px);
+  background-color:  #424242;
+}
+
+.inner-circle .h3 {
+  font-weight: 100;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+
+.inner-circle span {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+
+/* Results */
+
+.results {
+  background-color: #eee;
+}
+
+
