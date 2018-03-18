@@ -4,7 +4,9 @@
 
 const resultBtn = document.querySelector('.result-btn');
 const resultTop = document.querySelector('.result-top');
+const resultList = document.querySelector('.result-list');
 
+// Firebase
 const bmiDataFirebase = firebase.database().ref('bmiData');
 
 ////////////////
@@ -91,6 +93,19 @@ function displayBmiDataItem() {
   displayResultCircle(bmiNumber, bmiText)
 }
 
+// Retrieve and display data from firebase
 
+bmiDataFirebase.on('value', (snapshot)=>{
+  const data = [];
+  let str = "";
+  snapshot.forEach(item=>{
+    data.push(item.val());
+  })
+  console.log(data.reverse())
+  for (let item in data.reverse()){
+    str += `<li data-set=${item}>${data[item].bmiText}</li>`
+  }
+  resultList.innerHTML = str;
+});
 
 
