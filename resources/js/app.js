@@ -50,8 +50,7 @@ resultBtn.addEventListener('click', displayBmiDataItem);
 
 function displayResultCircle(number, text){
   let color = (text === "morbidly obese")?"morbidly":text; 
-  console.log(color);
-  let str = `<div class="${color}">
+  let str = `<div class="result-circle ${color}">
               <div class="d-flex justify-content-center align-items-center">
                 <div class="circle">
                   <div class="inner-circle d-flex flex-column justify-content-center align-items-center">
@@ -74,6 +73,13 @@ function displayBmiDataItem() {
   const inch = document.querySelector('.inch').value;
   const height = `${foot}.${inch}`;
   const bmiNumber = bmiCalulator(parseInt(foot), parseInt(inch), parseInt(weight)).toFixed(2);
+
+  if (isNaN(parseInt(foot))|| isNaN(parseInt(inch)) || isNaN(parseInt(weight))){
+    alert('Please enter valid numbers!');
+    return;
+  }
+
+
   let bmiText = '';
   const date = getToday();
   if (bmiNumber >= 40) {

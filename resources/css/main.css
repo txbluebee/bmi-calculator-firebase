@@ -281,3 +281,12 @@ header {
 }
 
 
+/* FOOTER */
+
+footer {
+  background-color: #FFD366;
+}
+
+.main-section {
+  min-height: calc(100vh - 256px - 71px);
+}
