@@ -10,16 +10,17 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="./vendors/css/ionicons.min.css">
   <link rel="stylesheet" href="./resources/css/main.css">
+  <link rel="stylesheet" href="./resources/css/queries.css">
 </head>
 
 <body>
   <header class="py-5">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 text-center">
-          <img class="mt-4" src="./resources/img/BMICLogo.png" alt="bmi logo">
+        <div class="col-md-4 text-center text-md-right">
+          <img class="mt-md-4" src="./resources/img/BMICLogo.png" alt="bmi logo">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 flex-center my-5 my-md-0">
           <div class="form-section">
             <div>
               <label>WEIGHT</label>
@@ -43,9 +44,9 @@
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="result-top">
-            <a class="mt-4 result-btn d-flex justify-content-center align-items-center">
+        <div class="col-md-4 px-0">
+          <div class="result-top d-flex justify-content-center justify-content-md-start mt-4">
+            <a class="result-btn d-flex justify-content-center align-items-center">
               see result
             </a>
             <!-- <div class="healthy-color">
@@ -67,7 +68,7 @@
       </div>
     </div>
   </header>
-  <section class="results py-5 main-section">
+  <section class="results py-3 py-sm-5 main-section">
     <div class="container">
       <div class="h2 text-center text-secondary mb-4">BMI HISTORY</div>
       <ul class="result-list">

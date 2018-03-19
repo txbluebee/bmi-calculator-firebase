@@ -1,0 +1,85 @@
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+  .inner-circle .h3 {
+    font-size: 1.5rem;
+  }
+
+  .result-top span{
+    font-size: 0.9rem;
+  }
+
+  .circle .reload-icon 
+
+  .result-list li {
+    height: 58px;
+  }
+
+  .result-list li div:nth-child(2) {
+
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  .result-list li .box-number {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+  .result-list li .box-number span{
+    font-size: 0.6rem;
+    font-weight: 400;
+  }
+
+  .result-list li div:nth-child(6){
+    font-size: 0.9rem;
+  }
+
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+  .result-list li{
+    width: 100%;
+  }
+
+  .result-list li div:last-child a:link,
+  .result-list li div:last-child a:visited {
+    font-size: 0.8rem;
+  }
+
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .result-list li {
+    height: auto;
+    flex-direction: column;
+    margin-bottom: 1rem; 
+  }
+
+  .result-list li>div {
+    margin: 0.2rem 0;
+  }
+
+  .result-list li div:nth-child(2) {
+    font-weight: 500;
+    font-size: 1rem;
+    margin-top: 0;
+  }
+
+  .result-list li div:nth-child(6){
+    font-weight: 500;
+  }
+
+  .result-list li div:last-child {
+    position: absolute;
+    right: 1rem;
+  }
+
+}
+
+
+
+
+
+
