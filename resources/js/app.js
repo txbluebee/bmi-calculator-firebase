@@ -6,7 +6,7 @@ const resultBtn = document.querySelector('.result-btn');
 const resultTop = document.querySelector('.result-top');
 const resultList = document.querySelector('.result-list');
 
-// Firebase
+// Firebasedelete-btn
 const bmiDataFirebase = firebase.database().ref('bmiData');
 
 ////////////////
@@ -96,16 +96,41 @@ function displayBmiDataItem() {
 // Retrieve and display data from firebase
 
 bmiDataFirebase.on('value', (snapshot)=>{
-  const data = [];
+  const data = snapshot.val();
   let str = "";
-  snapshot.forEach(item=>{
-    data.push(item.val());
-  })
-  console.log(data.reverse())
-  for (let item in data.reverse()){
-    str += `<li data-set=${item}>${data[item].bmiText}</li>`
+  for (let item in data){
+    str += `<li data-key=${item}>
+              <div class="colortheme bg-${data[item].bmiText}"></div>
+              <div>${data[item].bmiText}</div>
+              <div class="box-number">
+                <span>BMI</span>
+                ${data[item].bmiNumber}
+              </div>
+              <div class="box-number">
+                <span>weight</span>
+                ${data[item].weight} lbs
+              </div>
+              <div class="box-number">
+                <span>height</span>
+                ${data[item].height} ft
+              </div>
+              <div>${data[item].date}</div>
+              <div class="close">
+                <a class="delete-btn">
+                  <i class="ion-ios-close-outline" data-key=${item}></i>
+                </a>
+              </div>
+            </li>`
   }
   resultList.innerHTML = str;
 });
+
+// Delete BMI data
+
+resultList.addEventListener('click', function(e){
+  if (e.target.nodeName !=='I') return;
+  let key = e.target.dataset.key;
+  bmiDataFirebase.child(key).remove();
+})
 
 

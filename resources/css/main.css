@@ -71,6 +71,10 @@ header {
   color: #86D73F;
 }
 
+.bg-healthy {
+  background-color: #86D73F;
+}
+
 .healthy .circle,
 .healthy .reload-icon {
   background-color:#86D73F;
@@ -78,6 +82,10 @@ header {
 
 .underweight {
   color: #31BAF9;
+}
+
+.bg-underweight {
+  background-color: #31BAF9;
 }
 
 .underweight .circle,
@@ -89,6 +97,11 @@ header {
   color: #FF982D;
 }
 
+.bg-overweight {
+  background-color: #FF982D;
+}
+
+
 .overweight .circle,
 .overweight .reload-icon{
   background-color: #FF982D;
@@ -98,6 +111,10 @@ header {
   color: #FF6C03;
 }
 
+.bg-obese {
+  background-color: #FF6C03;
+}
+
 .obese .circle,
 .obese .reload-icon{
   background-color: #FF6C03;
@@ -105,6 +122,10 @@ header {
 
 .morbidly {
   color: #FF1200;
+}
+
+.bg-morbidly {
+  background-color: #FF1200;
 }
 
 .morbidly .circle,
@@ -183,7 +204,80 @@ header {
 /* Results */
 
 .results {
-  background-color: #eee;
+  background-color: rgba(238, 238, 238, 0.863);
+}
+
+.results .h2 {
+  font-weight: 300;
+}
+
+.result-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.result-list li{
+  background-color: #fff;
+  padding: 0.6rem;
+  width: 80%;
+  margin: 0.8rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 3px rgba(199, 182, 182, 0.231);
+  position: relative;
+}
+
+.result-list li>div {
+  flex: 3;
+}
+
+.result-list .colortheme {
+  position: absolute;
+  left: 0;
+  width: 6px;
+  top: 0;
+  bottom: 0;
+}
+
+.result-list li div:nth-child(2) {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.result-list li div:nth-child(6){
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.result-list li div:last-child {
+  flex: 1;
+  text-align: center;
+}
+
+.result-list li div:last-child a:link,
+.result-list li div:last-child a:visited {
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.result-list li .box-number {
+  display: flex;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.result-list li .box-number span{
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  align-self: baseline;
+  margin-right: 0.2rem;
 }
 
 
