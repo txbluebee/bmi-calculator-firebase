@@ -101,29 +101,65 @@ function displayBmiDataItem() {
 
 // Retrieve and display data from firebase
 
+// bmiDataFirebase.on('value', (snapshot)=>{
+//   const data = snapshot.val();
+//   let str = "";
+//   for (let item in data){
+//     str += `<li data-key=${item}>
+//               <div class="colortheme bg-${data[item].bmiText}"></div>
+//               <div>${data[item].bmiText}</div>
+//               <div class="box-number">
+//                 <span>BMI</span>
+//                 ${data[item].bmiNumber}
+//               </div>
+//               <div class="box-number">
+//                 <span>weight</span>
+//                 ${data[item].weight} lbs
+//               </div>
+//               <div class="box-number">
+//                 <span>height</span>
+//                 ${data[item].height} ft
+//               </div>
+//               <div>${data[item].date}</div>
+//               <div class="close">
+//                 <a class="delete-btn">
+//                   <i class="ion-ios-close-outline" data-key=${item}></i>
+//                 </a>
+//               </div>
+//             </li>`
+//   }
+//   resultList.innerHTML = str;
+// });
+
+
 bmiDataFirebase.on('value', (snapshot)=>{
-  const data = snapshot.val();
+  const data = [];
+  snapshot.forEach(item=>{
+    var bmiObj = item.val();
+    bmiObj.key = item.key;
+    data.push(bmiObj);
+  })
   let str = "";
-  for (let item in data){
-    str += `<li data-key=${item}>
-              <div class="colortheme bg-${data[item].bmiText}"></div>
-              <div>${data[item].bmiText}</div>
+  for (let item of data.reverse()){
+    str += `<li data-key=${item.key}>
+              <div class="colortheme bg-${item.bmiText}"></div>
+              <div>${item.bmiText}</div>
               <div class="box-number">
                 <span>BMI</span>
-                ${data[item].bmiNumber}
+                ${item.bmiNumber}
               </div>
               <div class="box-number">
                 <span>weight</span>
-                ${data[item].weight} lbs
+                ${item.weight} lbs
               </div>
               <div class="box-number">
                 <span>height</span>
-                ${data[item].height} ft
+                ${item.height} ft
               </div>
-              <div>${data[item].date}</div>
+              <div>${item.date}</div>
               <div class="close">
                 <a class="delete-btn">
-                  <i class="ion-ios-close-outline" data-key=${item}></i>
+                  <i class="ion-ios-close-outline" data-key=${item.key}></i>
                 </a>
               </div>
             </li>`
