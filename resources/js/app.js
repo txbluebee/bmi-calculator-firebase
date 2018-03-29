@@ -36,11 +36,19 @@ function getToday(){
 // EVENTS    ///
 ///////////////
 
+
+
 // RELOAD PAGE
 resultTop.addEventListener('click',function(e){
   e.preventDefault(e);
-  if (e.target.nodeName !== "IMG"){ return;}
+  if (e.target.nodeName !== "SPAN"){ return;}
   location.reload();
+  // document.querySelector('.weight').value = "";
+  // document.querySelector('.foot').value = "";
+  // document.querySelector('.inch').value = "";
+  // resultTop.innerHTML = `<a class="result-btn d-flex justify-content-center align-items-center">
+  //                         see result
+  //                       </a>`
 })
 
 
