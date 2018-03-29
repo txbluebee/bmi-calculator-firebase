@@ -85,6 +85,10 @@ header {
   background-color:#86D73F;
 }
 
+.healthy .reload-icon {
+  color: #fff;
+}
+
 .underweight {
   color: #31BAF9;
 }
@@ -184,6 +188,9 @@ header {
 }
 
 .circle .reload-icon {
+  background-image: url('./../img/icons_loop.png');
+  background-repeat: no-repeat;
+  background-position: center center;
   position: absolute;
   border-radius: 50%;
   left: 75%;
@@ -193,12 +200,10 @@ header {
   cursor: pointer;
   border: 1px solid #424242;
   transition: border 0.2s;
+  color: #424242;
+
 }
 
-.reload-icon img {
-  width: 15px;
-  height: 15px;
-}
 
 .reload-icon:hover,
 .reload-icon:active {

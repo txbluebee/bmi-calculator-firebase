@@ -56,10 +56,8 @@ function displayResultCircle(number, text){
                   <div class="inner-circle d-flex flex-column justify-content-center align-items-center">
                     <div class="h3">${number}</div>
                     <span>bmi</span>
+                    <span class="reload-icon"></span>
                   </div>
-                  <a class="reload-icon text-center">
-                    <img src="./resources/img/icons_loop.png" alt="reload icon">
-                  </a>
                 </div>
                 <span>${text}</span>
               </div>
